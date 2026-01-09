@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © MyCompany. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <!-- "standard" means this is for the Frontend (storefront) -->
+    <router id="standard">
+
+        <route id="Sachu_Eaterypayment" frontName="eaterypayment">
+            <module name="Sachu_Eaterypayment" />
+        </route>
+
+    </router>
+</config>

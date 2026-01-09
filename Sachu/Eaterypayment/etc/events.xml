@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_shipment_save_after">
+        <observer name="Sachu_Eaterypayment_shipment_observer" instance="Sachu\Eaterypayment\Observer\ShipmentObserver" />
+    </event>
+    <event name="sales_order_creditmemo_save_after">
+        <observer name="Sachu_Eaterypayment_creditmemo_after_save" instance="Sachu\Eaterypayment\Observer\CreditmemoAfterSave" />
+    </event>
+</config>

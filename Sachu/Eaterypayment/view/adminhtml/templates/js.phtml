@@ -1,0 +1,21 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$orderId = $block->getRequest()->getParam('order_id');
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$order = $objectManager->create(\Magento\Sales\Model\Order::class)->load($orderId);
+
+// Safely prepare the data array
+$configData = [
+    'orderId' => $orderId,
+    'orderStatus' => $order ? $order->getStatus() : 'unknown'
+];
+?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Sachu_Eaterypayment/js/order-handler": <?= /* @noEscape */ json_encode($configData) ?>
+    }
+}
+</script>

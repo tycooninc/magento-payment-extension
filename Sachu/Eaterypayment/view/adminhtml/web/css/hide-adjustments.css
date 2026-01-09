@@ -1,0 +1,3 @@
+table.data-table:nth-child(2) > tbody:nth-child(2) > tr:nth-child(3) {
+    display:none;
+}

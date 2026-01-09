@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="eaterypayment" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Payment Enable</label>
+                <field id="active" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <field id="title" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Method Title</label>
+                    <comment>Enter method title here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="merchant_number" translate="label comment" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Merchant Number</label>
+                    <comment>Enter your merchant Number here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="merchant_secret" translate="label comment" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Merchant Secret</label>
+                    <comment>Enter your merchant secret here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="appid" translate="label comment" sortOrder="5" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>App ID</label>
+                    <comment>Enter your APPID here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="gateway_url" translate="label comment" sortOrder="6" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Gateway URL</label>
+                    <comment>Enter your gateway url here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="transactionMethod" translate="label comment" sortOrder="7" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Transaction Method</label>
+                    <comment>Enter your transaction method here</comment>
+                    <validate>required-entry</validate>
+                </field>
+
+                <field id="order_status" translate="label" type="select" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>New Order Status</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>
+                </field>
+
+                <field id="custom_file_upload" translate="label" type="Magento\Config\Block\System\Config\Form\Field\Image" sortOrder="6" showInDefault="1" showInWebsite="1" >
+                    <label>Upload custom file</label>
+                    <backend_model>Sachu\Eaterypayment\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">custom_folder/images</upload_dir>
+                    <base_url type="media" scope_info="1">custom_folder/images</base_url>
+                </field>
+
+            </group>
+
+
+        </section>
+    </system>
+</config>
